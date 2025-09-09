@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微信聊天记录恢复方法</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#07C160',
+                        secondary: '#F5F5F5',
+                        dark: '#333333',
+                        light: '#FFFFFF',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .card-shadow {
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            }
+            .step-number {
+                width: 2rem;
+                height: 2rem;
+                line-height: 2rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-dark">
+    <!-- 顶部导航 -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-weixin text-primary text-2xl"></i>
+                <h1 class="text-xl font-bold">微信聊天记录恢复指南</h1>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#methods" class="hover:text-primary transition-colors">恢复方法</a>
+                <a href="#notes" class="hover:text-primary transition-colors">注意事项</a>
+                <a href="#faq" class="hover:text-primary transition-colors">常见问题</a>
+            </div>
+            <button class="md:hidden text-dark">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- 介绍部分 -->
+        <section class="mb-12 text-center">
+            <div class="inline-block bg-primary/10 rounded-full px-4 py-1 mb-4">
+                <span class="text-primary text-sm">实用指南</span>
+            </div>
+            <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold mb-4">如何恢复微信聊天记录？</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                不小心删除了重要的微信聊天记录？别担心，本指南将介绍几种常见的恢复方法，帮助你尝试找回丢失的聊天记录。
+            </p>
+        </section>
+
+        <!-- 恢复方法部分 -->
+        <section id="methods" class="mb-16">
+            <h3 class="text-2xl font-bold mb-8 text-center">常用恢复方法</h3>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 方法1：微信自带备份恢复 -->
+                <div class="bg-white rounded-xl p-6 card-shadow hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="step-number bg-primary text-white rounded-full mr-3">1</div>
+                        <h4 class="text-xl font-semibold">微信自带备份恢复</h4>
+                    </div>
+                    <div class="text-gray-600 mb-4">
+                        <p class="mb-2">如果之前开启过微信的备份功能，可以通过以下步骤恢复：</p>
+                        <ol class="list-decimal pl-5 space-y-1">
+                            <li>打开微信，进入「我」-「设置」</li>
+                            <li>选择「聊天」-「聊天记录备份与迁移」</li>
+                            <li>选择「恢复聊天记录至手机」</li>
+                            <li>选择需要恢复的备份文件进行恢复</li>
+                        </ol>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fa fa-info-circle mr-1"></i>
+                        <span>适用于之前有备份的情况</span>
+                    </div>
+                </div>
+
+                <!-- 方法2：手机本地备份恢复 -->
+                <div class="bg-white rounded-xl p-6 card-shadow hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="step-number bg-primary text-white rounded-full mr-3">2</div>
+                        <h4 class="text-xl font-semibold">手机本地备份恢复</h4>
+                    </div>
+                    <div class="text-gray-600 mb-4">
+                        <p class="mb-2">部分手机系统会自动备份应用数据：</p>
+                        <ol class="list-decimal pl-5 space-y-1">
+                            <li>进入手机「设置」-「应用管理」</li>
+                            <li>找到微信，进入「存储」选项</li>
+                            <li>查看是否有「备份与恢复」选项</li>
+                            <li>选择合适的备份点进行恢复</li>
+                        </ol>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fa fa-android mr-1"></i>
+                        <span>不同手机品牌操作可能不同</span>
+                    </div>
+                </div>
+
+                <!-- 方法3：iCloud/iTunes恢复（苹果用户） -->
+                <div class="bg-white rounded-xl p-6 card-shadow hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="step-number bg-primary text-white rounded-full mr-3">3</div>
+                        <h4 class="text-xl font-semibold">iCloud/iTunes恢复（苹果）</h4>
+                    </div>
+                    <div class="text-gray-600 mb-4">
+                        <p class="mb-2">苹果用户可通过iCloud或iTunes恢复：</p>
+                        <ol class="list-decimal pl-5 space-y-1">
+                            <li>确保之前已通过iCloud备份过数据</li>
+                            <li>通过「设置」-「通用」-「还原」</li>
+                            <li>选择「从iCloud备份恢复」</li>
+                            <li>选择包含微信记录的备份进行恢复</li>
+                        </ol>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fa fa-apple mr-1"></i>
+                        <span>会覆盖当前手机数据，请谨慎操作</span>
+                    </div>
+                </div>
+
+                <!-- 方法4：第三方工具恢复 -->
+                <div class="bg-white rounded-xl p-6 card-shadow hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="step-number bg-primary text-white rounded-full mr-3">4</div>
+                        <h4 class="text-xl font-semibold">第三方工具恢复</h4>
+                    </div>
+                    <div class="text-gray-600 mb-4">
+                        <p class="mb-2">专业的数据恢复软件可能帮助恢复：</p>
+                        <ol class="list-decimal pl-5 space-y-1">
+                            <li>选择口碑良好的专业恢复工具</li>
+                            <li>按照软件指引连接手机</li>
+                            <li>扫描手机中的残留数据</li>
+                            <li>预览并恢复需要的聊天记录</li>
+                        </ol>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fa fa-wrench mr-1"></i>
+                        <span>部分工具可能需要付费</span>
+                    </div>
+                </div>
+
+                <!-- 方法5：联系对方获取 -->
+                <div class="bg-white rounded-xl p-6 card-shadow hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="step-number bg-primary text-white rounded-full mr-3">5</div>
+                        <h4 class="text-xl font-semibold">联系对方获取</h4>
+                    </div>
+                    <div class="text-gray-600 mb-4">
+                        <p class="mb-2">如果对方仍保留聊天记录，可以：</p>
+                        <ol class="list-decimal pl-5 space-y-1">
+                            <li>请对方截图或转发重要聊天内容</li>
+                            <li>让对方通过文件传输发送聊天记录</li>
+                            <li>对于特别重要的记录，可以拍照留存</li>
+                        </ol>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fa fa-users mr-1"></i>
+                        <span>简单直接，适用于重要联系人</span>
+                    </div>
+                </div>
+
+                <!-- 方法6：电脑端备份恢复 -->
+                <div class="bg-white rounded-xl p-6 card-shadow hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <div class="step-number bg-primary text-white rounded-full mr-3">6</div>
+                        <h4 class="text-xl font-semibold">电脑端备份恢复</h4>
+                    </div>
+                    <div class="text-gray-600 mb-4">
+                        <p class="mb-2">通过微信电脑版恢复备份：</p>
+                        <ol class="list-decimal pl-5 space-y-1">
+                            <li>在电脑上登录微信</li>
+                            <li>点击左下角「更多」-「备份与恢复」</li>
+                            <li>选择「恢复聊天记录至手机」</li>
+                            <li>选择需要恢复的记录并确认</li>
+                        </ol>
+                    </div>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fa fa-desktop mr-1"></i>
+                        <span>需确保手机和电脑在同一网络</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 注意事项 -->
+        <section id="notes" class="mb-16 bg-secondary rounded-2xl p-8">
+            <h3 class="text-2xl font-bold mb-6 flex items-center">
+                <i class="fa fa-exclamation-circle text-primary mr-2"></i>
+                注意事项
+            </h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="flex">
+                    <div class="mr-4 mt-1 text-primary">
+                        <i class="fa fa-shield text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2">保护隐私安全</h4>
+                        <p class="text-gray-600">使用第三方工具时，选择正规软件，避免泄露个人信息和聊天内容。</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="mr-4 mt-1 text-primary">
+                        <i class="fa fa-clock-o text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2">及时操作</h4>
+                        <p class="text-gray-600">删除后应尽快尝试恢复，避免新数据覆盖原有记录，降低恢复成功率。</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="mr-4 mt-1 text-primary">
+                        <i class="fa fa-ban text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2">成功率并非100%</h4>
+                        <p class="text-gray-600">并非所有删除的记录都能恢复，具体取决于删除时间和操作情况。</p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="mr-4 mt-1 text-primary">
+                        <i class="fa fa-backup text-xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-2">定期备份习惯</h4>
+                        <p class="text-gray-600">养成定期备份聊天记录的习惯，可有效避免意外删除造成的损失。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section id="faq" class="mb-16">
+            <h3 class="text-2xl font-bold mb-8 text-center">常见问题</h3>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="bg-white rounded-xl overflow-hidden card-shadow">
+                    <button class="w-full text-left p-6 focus:outline-none flex justify-between items-center">
+                        <span class="font-semibold">删除的微信聊天记录能100%恢复吗？</span>
+                        <i class="fa fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="px-6 pb-6 text-gray-600">
+                        不能保证100%恢复。聊天记录删除后，是否能恢复取决于多种因素，包括删除时间、是否有新数据覆盖、是否有备份等。一般来说，删除时间越短，恢复成功率越高。
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden card-shadow">
+                    <button class="w-full text-left p-6 focus:outline-none flex justify-between items-center">
+                        <span class="font-semibold">微信聊天记录默认保存在哪里？</span>
+                        <i class="fa fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="px-6 pb-6 text-gray-600">
+                        微信聊天记录默认保存在手机本地存储空间中。安卓系统通常在/data/data/com.tencent.mm目录下，iOS系统则在应用沙盒内。这些目录一般需要root或越狱才能直接访问。
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden card-shadow">
+                    <button class="w-full text-left p-6 focus:outline-none flex justify-between items-center">
+                        <span class="font-semibold">使用第三方工具恢复聊天记录安全吗？</span>
+                        <i class="fa fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="px-6 pb-6 text-gray-600">
+                        选择正规、口碑良好的第三方工具相对安全，但仍存在一定风险。建议选择知名品牌的软件，避免使用来源不明的工具，以防个人信息泄露。重要操作前最好备份手机数据。
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl overflow-hidden card-shadow">
+                    <button class="w-full text-left p-6 focus:outline-none flex justify-between items-center">
+                        <span class="font-semibold">如何设置自动备份微信聊天记录？</span>
+                        <i class="fa fa-chevron-down text-gray-400 transition-transform"></i>
+                    </button>
+                    <div class="px-6 pb-6 text-gray-600">
+                        打开微信，进入「我」-「设置」-「聊天」-「聊天记录备份与迁移」，可以设置自动备份选项。部分手机系统也提供应用数据自动备份功能，可以在手机设置中找到相关选项进行配置。
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 建议 -->
+        <section class="text-center mb-16">
+            <div class="inline-block bg-primary/10 rounded-full px-6 py-3 mb-6">
+                <h3 class="text-lg font-semibold text-primary">最佳实践</h3>
+            </div>
+            <p class="text-gray-600 max-w-2xl mx-auto mb-6">
+                为避免聊天记录丢失，建议定期备份重要内容。微信提供了完善的备份功能，合理使用可以有效保护你的聊天记录安全。
+            </p>
+            <button class="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full transition-colors flex items-center mx-auto">
+                <i class="fa fa-bookmark-o mr-2"></i>
+                立即设置微信备份
+            </button>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center justify-center md:justify-start">
+                        <i class="fa fa-weixin text-primary text-2xl mr-2"></i>
+                        <span class="font-bold text-xl">微信聊天记录恢复指南</span>
+                    </div>
+                    <p class="text-gray-400 mt-2 text-center md:text-left">
+                        提供专业的微信使用技巧和数据保护建议
+                    </p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                        <i class="fa fa-question-circle text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                        <i class="fa fa-share-alt text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                        <i class="fa fa-star text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <hr class="border-gray-700 my-8">
+            <div class="text-center text-gray-500 text-sm">
+                <p>本指南仅供参考，实际操作可能因微信版本和手机型号有所不同</p>
+                <p class="mt-2">© 2023 微信使用指南 - 保护你的数据安全</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 折叠面板交互
+        document.querySelectorAll('#faq button').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                // 切换内容显示/隐藏
+                if (content.style.display === 'none' || !content.style.display) {
+                    content.style.display = 'block';
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    content.style.display = 'none';
+                    icon.style.transform = 'rotate(0)';
+                }
+            });
+        });
+
+        // 默认隐藏所有FAQ内容，只显示第一个
+        const faqContents = document.querySelectorAll('#faq div.px-6');
+        faqContents.forEach((content, index) => {
+            if (index !== 0) {
+                content.style.display = 'none';
+            }
+        });
+
+        // 导航栏滚动效果
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
